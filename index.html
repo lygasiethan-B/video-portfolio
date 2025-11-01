@@ -68,7 +68,7 @@
             position: relative;
             height: 100vh;
             background: linear-gradient(to bottom, rgba(20, 20, 20, 0.6) 0%, rgba(20, 20, 20, 0.8) 100%), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%23141414"/><g fill="%23222" opacity="0.5"><circle cx="200" cy="100" r="50"/><circle cx="800" cy="150" r="80"/><circle cx="1000" cy="400" r="60"/><circle cx="150" cy="500" r="70"/><circle cx="500" cy="600" r="90"/></g></svg>');
+                        url('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -112,6 +112,19 @@
             max-width: 550px;
         }
         
+        .trust-badges {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
         .contact-info {
             display: flex;
             gap: 1.5rem;
@@ -147,6 +160,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
         }
         
         .btn-primary {
@@ -158,6 +173,23 @@
             background-color: #c44a1a;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(226, 88, 34, 0.3);
+        }
+        
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+        
+        .btn-primary:hover::after {
+            left: 50%;
+            top: 50%;
         }
         
         .btn-secondary {
@@ -233,12 +265,28 @@
             overflow: hidden;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             border-color: rgba(226, 88, 34, 0.3);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
         }
         
         .service-header {
@@ -251,6 +299,19 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+        }
+        
+        .service-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .service-badge {
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
         }
         
         .service-body {
@@ -349,6 +410,19 @@
             font-weight: 600;
         }
         
+        .portfolio-metrics {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+        
+        .portfolio-metric {
+            background: rgba(255,255,255,0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+        
         /* Contact Form */
         .contact-form {
             max-width: 700px;
@@ -405,6 +479,30 @@
             border-left: 3px solid var(--brand-yellow);
         }
         
+        .contact-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .contact-feature {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(226, 88, 34, 0.1);
+            border-radius: 8px;
+        }
+        
+        .contact-feature:nth-child(2) {
+            background: rgba(240, 180, 41, 0.1);
+        }
+        
+        .contact-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--netflix-black);
@@ -443,6 +541,59 @@
             font-size: 0.9rem;
         }
         
+        .footer-credentials {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--brand-orange);
+        }
+        
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            text-align: center;
+        }
+        
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: var(--brand-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-title {
@@ -472,6 +623,11 @@
             }
             
             .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .trust-badges {
                 flex-direction: column;
                 gap: 1rem;
             }
@@ -518,6 +674,21 @@
             <p class="hero-tagline">Premium Video Editor & Digital Storyteller</p>
             <p class="hero-description">Transforming raw footage into cinematic narratives that captivate audiences and deliver measurable results for global creators and brands.</p>
             
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span style="color: var(--brand-yellow);">⭐</span>
+                    <span>10+ Years Experience</span>
+                </div>
+                <div class="trust-badge">
+                    <span style="color: var(--brand-yellow);">🏆</span>
+                    <span>Award-Winning Editor</span>
+                </div>
+                <div class="trust-badge">
+                    <span style="color: var(--brand-yellow);">💼</span>
+                    <span>Global Clients</span>
+                </div>
+            </div>
+            
             <div class="contact-info">
                 <a href="https://wa.me/256756180429" class="contact-item">
                     <span>📱</span>
@@ -532,7 +703,28 @@
             <div class="cta-buttons">
                 <a href="#services" class="btn btn-primary">Explore Services</a>
                 <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
-                <a href="https://wa.me/256756180429" class="btn btn-whatsapp">Chat on WhatsApp</a>
+                <a href="https://wa.me/256756180429" class="btn btn-whatsapp">Connect for Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--netflix-dark) 0%, var(--netflix-black) 100%);">
+        <div class="section-header">
+            <h2 class="section-title">Trusted by Global Creators</h2>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div style="color: var(--text-secondary);">Projects Delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15M+</div>
+                <div style="color: var(--text-secondary);">Total Views Generated</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div style="color: var(--text-secondary);">Client Satisfaction</div>
             </div>
         </div>
     </section>
@@ -549,6 +741,10 @@
             <div class="service-card">
                 <div class="service-header">
                     <h3 class="service-title">Short-Form Impact Edit</h3>
+                    <div class="service-badges">
+                        <span class="service-badge">🎬 DaVinci Resolve</span>
+                        <span class="service-badge">⚡ 48h Delivery</span>
+                    </div>
                 </div>
                 <div class="service-body">
                     <p>Optimized for YouTube Shorts, TikTok, and Instagram Reels - designed to stop the scroll and maximize engagement.</p>
@@ -564,7 +760,7 @@
                     
                     <div class="price">$163.55</div>
                     <p class="payment-note">Instant purchase via Selar</p>
-                    <a href="https://selar.com/6q182625of" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Purchase Now</a>
+                    <a href="https://selar.com/6q182625of" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Start Premium Project</a>
                 </div>
             </div>
             
@@ -572,6 +768,10 @@
             <div class="service-card">
                 <div class="service-header">
                     <h3 class="service-title">Long-Form Narrative Edit</h3>
+                    <div class="service-badges">
+                        <span class="service-badge">🎬 DaVinci Resolve</span>
+                        <span class="service-badge">📈 Retention Focused</span>
+                    </div>
                 </div>
                 <div class="service-body">
                     <p>Comprehensive editing for YouTube videos, documentaries, and educational content with cinematic storytelling.</p>
@@ -587,7 +787,7 @@
                     
                     <div class="price">$285</div>
                     <p class="payment-note">Secure payment via Payoneer</p>
-                    <a href="#contact" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Request This Service</a>
+                    <a href="#contact" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Schedule Strategy Call</a>
                 </div>
             </div>
             
@@ -595,6 +795,10 @@
             <div class="service-card">
                 <div class="service-header">
                     <h3 class="service-title">Custom Premium Project</h3>
+                    <div class="service-badges">
+                        <span class="service-badge">🎬 DaVinci Resolve</span>
+                        <span class="service-badge">✨ Fully Custom</span>
+                    </div>
                 </div>
                 <div class="service-body">
                     <p>Fully customized editing solutions for complex projects requiring advanced techniques and specialized approaches.</p>
@@ -610,7 +814,7 @@
                     
                     <div class="price">Custom Quote</div>
                     <p class="payment-note">Secure payment via Payoneer</p>
-                    <a href="#contact" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Get a Quote</a>
+                    <a href="#contact" class="btn btn-primary" style="display: block; text-align: center; width: 100%;">Schedule Strategy Call</a>
                 </div>
             </div>
         </div>
@@ -621,8 +825,38 @@
         </div>
     </section>
 
+    <!-- Process Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Premium Workflow Process</h2>
+            <p class="section-subtitle">A streamlined, professional process ensuring quality and consistency</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-number">1</div>
+                <h4 style="margin-bottom: 0.5rem;">Consultation</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Strategy session to understand your vision and goals</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">2</div>
+                <h4 style="margin-bottom: 0.5rem;">Secure Payment</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Protected transaction via Payoneer</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">3</div>
+                <h4 style="margin-bottom: 0.5rem;">Premium Editing</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Cinematic editing with retention optimization</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">4</div>
+                <h4 style="margin-bottom: 0.5rem;">Delivery & Support</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Final delivery with optional revisions</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
+    <section class="section section-dark" id="portfolio">
         <div class="section-header">
             <h2 class="section-title">Featured Work</h2>
             <p class="section-subtitle">A curated selection of projects showcasing cinematic storytelling and professional editing techniques.</p>
@@ -634,6 +868,9 @@
                 <iframe src="https://www.youtube.com/embed/mrdD0A_wodI" title="Professional Video Editing Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
                     <h3 class="portfolio-title">Professional Editing Showcase</h3>
+                    <div class="portfolio-metrics">
+                        <span class="portfolio-metric">+300% retention</span>
+                    </div>
                 </div>
             </div>
             
@@ -642,6 +879,9 @@
                 <iframe src="https://www.youtube.com/embed/9J0hnQFq43w" title="Digital Storytelling Project" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
                     <h3 class="portfolio-title">Digital Storytelling Project</h3>
+                    <div class="portfolio-metrics">
+                        <span class="portfolio-metric">+250% engagement</span>
+                    </div>
                 </div>
             </div>
             
@@ -650,6 +890,9 @@
                 <iframe src="https://www.youtube.com/embed/RiXxvKqHyWY" title="Project Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
                     <h3 class="portfolio-title">Project Showcase</h3>
+                    <div class="portfolio-metrics">
+                        <span class="portfolio-metric">Cinematic quality</span>
+                    </div>
                 </div>
             </div>
             
@@ -658,6 +901,9 @@
                 <iframe src="https://www.youtube.com/embed/cGrPSY-F0WU" title="Introducing a new type of Hub… The Chautari Hub" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
                     <h3 class="portfolio-title">The Chautari Hub</h3>
+                    <div class="portfolio-metrics">
+                        <span class="portfolio-metric">Brand storytelling</span>
+                    </div>
                 </div>
             </div>
             
@@ -666,20 +912,47 @@
                 <iframe src="https://www.youtube.com/embed/U-d7RdzcKtI" title="Transforming Communities Through Innovation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
                     <h3 class="portfolio-title">Transforming Communities</h3>
+                    <div class="portfolio-metrics">
+                        <span class="portfolio-metric">Documentary style</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section section-dark" id="contact">
+    <section class="section" id="contact">
         <div class="section-header">
             <h2 class="section-title">Start Your Project</h2>
             <p class="section-subtitle">Ready to elevate your content? Share your project details and I'll provide a custom quote with a secure Payoneer payment link.</p>
         </div>
         
+        <div class="contact-features">
+            <div class="contact-feature">
+                <div class="contact-feature-icon">⏱️</div>
+                <h4 style="margin-bottom: 0.5rem;">48-Hour Response</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Quick project assessment and quote</p>
+            </div>
+            <div class="contact-feature">
+                <div class="contact-feature-icon">🔒</div>
+                <h4 style="margin-bottom: 0.5rem;">Secure Process</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Protected payments and file handling</p>
+            </div>
+        </div>
+        
         <div class="contact-form">
-            <form id="project-form">
+            <form id="project-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="9ce26fff-f98c-4fa2-9f2a-7bb1a3cfb231">
+                
+                <!-- Optional but recommended hidden fields -->
+                <input type="hidden" name="subject" value="Premium Video Editing Project Inquiry">
+                <input type="hidden" name="from_name" value="BINOMUGISHA Video Editing">
+                <input type="hidden" name="replyto" value="auto">
+                
+                <!-- Honeypot spam protection -->
+                <input type="checkbox" name="botcheck" style="display: none;">
+                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
@@ -696,8 +969,8 @@
                         <label for="service">Service Interested In *</label>
                         <select id="service" name="service" required>
                             <option value="">Select a service</option>
-                            <option value="short-form">Short-Form Impact Edit ($150) - Purchase via Selar</option>
-                            <option value="long-form">Long-Form Narrative Edit ($250) - Payoneer Payment</option>
+                            <option value="short-form">Short-Form Impact Edit ($163.55) - Purchase via Selar</option>
+                            <option value="long-form">Long-Form Narrative Edit ($285) - Payoneer Payment</option>
                             <option value="custom">Custom Project - Payoneer Payment</option>
                         </select>
                     </div>
@@ -726,13 +999,18 @@
                     <p><strong>Payment Process:</strong> After reviewing your project, I will send a secure Payoneer payment request to your email. Payoneer protects your transaction and offers multiple payment options including credit cards and bank transfers.</p>
                 </div>
                 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Submit Project Details</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                    <span class="btn-text">Submit Project Details</span>
+                    <span class="btn-loading" style="display: none;">Sending...</span>
+                </button>
+                
+                <div id="form-result" class="form-result" style="display: none;"></div>
                 
                 <div style="text-align: center;">
                     <p style="color: var(--text-secondary); margin-bottom: 1rem;">Or contact me directly:</p>
                     <a href="https://wa.me/256756180429" class="btn btn-whatsapp" style="display: inline-flex; align-items: center; gap: 0.5rem;">
                         <span>💬</span>
-                        <span>Chat on WhatsApp</span>
+                        <span>Connect for Consultation</span>
                     </a>
                 </div>
             </form>
@@ -777,6 +1055,12 @@
             </div>
         </div>
         
+        <div class="footer-credentials">
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Professional Video Editor | DaVinci Resolve Studio Certified | YouTube Optimization Specialist
+            </p>
+        </div>
+        
         <div class="copyright">
             &copy; <span id="current-year"></span> Nathan Binomugisha. All rights reserved.
         </div>
@@ -795,37 +1079,58 @@
             }, 500);
         });
         
-        // Simple form handling
-        document.getElementById('project-form').addEventListener('submit', function(e) {
+        // Web3Forms handling
+        document.getElementById('project-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const formResult = document.getElementById('form-result');
             
-            // Create email content
-            const subject = `Premium Video Editing Project: ${data.service}`;
-            const body = `
-Name: ${data.name}
-Email: ${data.email}
-Service: ${data.service}
-Timeline: ${data.timeline}
-
-Project Description:
-${data.description}
-
-Footage Details:
-${data.footage}
-
----
-Please send a secure Payoneer payment link to complete the booking process.
-            `;
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            submitBtn.disabled = true;
             
-            // Open default email client with pre-filled content
-            window.location.href = `mailto:binomugishacom@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Show confirmation message
-            alert('Thank you for your submission! Your email client will open with a pre-filled message. Please send it to proceed. I will respond with a secure Payoneer payment link within 24 hours.');
+            try {
+                const formData = new FormData(this);
+                
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    // Success
+                    formResult.style.display = 'block';
+                    formResult.className = 'form-result success';
+                    formResult.innerHTML = '✅ Thank you for your submission! I will review your project and send you a secure Payoneer payment link within 24 hours.';
+                    
+                    // Reset form
+                    this.reset();
+                } else {
+                    throw new Error(result.message || 'Failed to send message');
+                }
+            } catch (error) {
+                // Error
+                formResult.style.display = 'block';
+                formResult.className = 'form-result error';
+                formResult.innerHTML = '❌ Sorry, there was an error sending your message. Please try again or contact me directly at binomugishacom@gmail.com';
+            } finally {
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+                
+                // Scroll to result message
+                formResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         });
         
         // Add scroll animations
@@ -843,7 +1148,7 @@ Please send a secure Payoneer payment link to complete the booking process.
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.service-card, .portfolio-item, .contact-form').forEach(el => {
+        document.querySelectorAll('.service-card, .portfolio-item, .contact-form, .stat-item, .process-step').forEach(el => {
             observer.observe(el);
         });
     </script>
