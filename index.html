@@ -37,6 +37,25 @@
       gtag('config', 'AW-17700443108');
     </script>
     
+    <!-- Event snippet for Click to call conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17700443108/e_BFCNuEpLobEOSnnfhB',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -722,7 +741,7 @@
             </div>
             
             <div class="contact-info">
-                <a href="https://wa.me/256756180429" class="contact-item">
+                <a href="https://wa.me/256756180429" class="contact-item" onclick="return gtag_report_conversion('https://wa.me/256756180429')">
                     <span>📱</span>
                     <span>+256 756 180429</span>
                 </a>
@@ -739,7 +758,7 @@
             <div class="cta-buttons">
                 <a href="#services" class="btn btn-primary">Explore Services</a>
                 <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
-                <a href="https://wa.me/256756180429" class="btn btn-whatsapp">Connect for Consultation</a>
+                <a href="https://wa.me/256756180429" class="btn btn-whatsapp" onclick="return gtag_report_conversion('https://wa.me/256756180429')">Connect for Consultation</a>
             </div>
         </div>
     </section>
@@ -1049,7 +1068,7 @@
                 
                 <div style="text-align: center;">
                     <p style="color: var(--text-secondary); margin-bottom: 1rem;">Or contact me directly:</p>
-                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <a href="https://wa.me/256756180429" class="btn btn-whatsapp" style="display: inline-flex; align-items: center; gap: 0.5rem;" onclick="return gtag_report_conversion('https://wa.me/256756180429')">
                         <span>💬</span>
                         <span>Connect for Consultation</span>
                     </a>
@@ -1069,7 +1088,7 @@
                         <span>📍</span>
                         <span>Bukoto 1, Kisaasi Road<br>10320, Kampala Uganda</span>
                     </div>
-                    <a href="https://wa.me/256756180429" class="contact-item" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-right: 1rem;">
+                    <a href="https://wa.me/256756180429" class="contact-item" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-right: 1rem;" onclick="return gtag_report_conversion('https://wa.me/256756180429')">
                         <span>📱</span>
                         <span>+256 756 180429</span>
                     </a>
@@ -1089,7 +1108,7 @@
                 <a href="https://media.binomugisha.org">Media Consultancy</a>
                 <a href="https://www.linkedin.com/in/binomugisha/">LinkedIn</a>
                 <a href="mailto:binomugishacom@gmail.com">Email</a>
-                <a href="https://wa.me/256756180429">WhatsApp</a>
+                <a href="https://wa.me/256756180429" onclick="return gtag_report_conversion('https://wa.me/256756180429')">WhatsApp</a>
             </div>
             
             <div class="footer-links">
