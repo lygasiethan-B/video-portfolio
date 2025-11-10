@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Binomugisha | Premium Video Editing & Digital Storytelling Services</title>
     <meta name="description" content="Award-winning video editor with 7+ years experience. Premium YouTube editing, storytelling & retention optimization. Professional editing for creators & brands.">
-    <meta name="keywords" content="premium video editor, professional YouTube editing, video storytelling, DaVinci Resolve expert, Uganda video editor, African content creator, retention optimization">
+    <meta name="keywords" content="premium video editor, professional YouTube editing, video storytelling, DaVinci Resolve expert, Uganda video editor, African content creator, retention optimization, documentary film editor">
     <meta name="author" content="Nathan Binomugisha">
     
     <!-- Open Graph / Social Media -->
@@ -645,6 +645,84 @@
             font-size: 1.2rem;
         }
         
+        /* FAQ Modal Styles */
+        .faq-modal {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            display: none;
+        }
+        
+        .faq-modal[style*="display: flex"] {
+            opacity: 1;
+        }
+        
+        .faq-modal-content {
+            background: linear-gradient(145deg, var(--netflix-dark), var(--netflix-black));
+            max-width: 800px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-modal[style*="display: flex"] .faq-modal-content {
+            transform: translateY(0);
+        }
+        
+        .faq-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .faq-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .faq-header {
+            padding: 2rem 2rem 1rem;
+            background: linear-gradient(90deg, var(--brand-orange), #c44a1a);
+        }
+        
+        .faq-body {
+            padding: 2rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 2rem;
+        }
+        
+        .faq-footer {
+            padding: 1.5rem 2rem;
+            background: rgba(255,255,255,0.05);
+            text-align: center;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-title {
@@ -681,6 +759,15 @@
             .trust-badges {
                 flex-direction: column;
                 gap: 1rem;
+            }
+            
+            .faq-modal-content {
+                margin: 1rem;
+                max-height: calc(100vh - 2rem);
+            }
+            
+            .faq-header, .faq-body, .faq-footer {
+                padding: 1.5rem !important;
             }
         }
         
@@ -722,7 +809,7 @@
         <div class="hero-content animate-fadeInUp">
             <div class="hero-logo">🎬</div>
             <h1 class="hero-title">NATHAN BINOMUGISHA</h1>
-            <p class="hero-tagline">Premium Video Editor & Digital Storyteller</p>
+            <p class="hero-tagline">Professional Video Editor in East Africa</p>
             <p class="hero-description">Transforming raw footage into cinematic narratives that captivate audiences and deliver measurable results for global creators and brands.</p>
             
             <div class="trust-badges">
@@ -918,7 +1005,18 @@
         </div>
         
         <div class="portfolio-carousel">
-            <!-- New First Video -->
+            <!-- Documentary Film -->
+            <div class="portfolio-item">
+                <iframe src="https://www.youtube.com/embed/CgywaZheNZw" title="The Secret Life of Insects" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="portfolio-overlay">
+                    <h3 class="portfolio-title">The Secret Life of Insects</h3>
+                    <div class="portfolio-metrics">
+                        <span class="portfolio-metric">Documentary Film</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Video -->
             <div class="portfolio-item">
                 <iframe src="https://www.youtube.com/embed/mrdD0A_wodI" title="Professional Video Editing Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
@@ -929,7 +1027,7 @@
                 </div>
             </div>
             
-            <!-- New Additional Video -->
+            <!-- Digital Storytelling -->
             <div class="portfolio-item">
                 <iframe src="https://www.youtube.com/embed/9J0hnQFq43w" title="Digital Storytelling Project" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="portfolio-overlay">
@@ -1120,9 +1218,19 @@
             </div>
         </div>
         
+        <!-- FAQ Section -->
+        <div class="faq-section" style="margin: 3rem 0 2rem; text-align: center;">
+            <h3 style="margin-bottom: 1rem; color: var(--text-primary);">FAQs</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Answers to questions I often receive about documentary editing</p>
+            <button id="faq-trigger" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                <span>❓</span>
+                <span>View Frequently Asked Questions (FAQs)</span>
+            </button>
+        </div>
+        
         <div class="footer-credentials">
             <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                Professional Video Editor | DaVinci Resolve Studio Certified | YouTube Optimization Specialist
+                Professional Video Editor | DaVinci Resolve Studio Certified | YouTube Optimization
             </p>
         </div>
 
@@ -1136,6 +1244,58 @@
             &copy; <span id="current-year"></span> Nathan Binomugisha. All rights reserved.
         </div>
     </footer>
+
+    <!-- FAQ Modal -->
+    <div id="faq-modal" class="faq-modal">
+        <div class="faq-modal-content">
+            <button id="faq-close" class="faq-close">✕</button>
+            
+            <div class="faq-header">
+                <h2 style="color: white; margin-bottom: 0.5rem;">Frequently Asked Questions</h2>
+                <p style="color: rgba(255,255,255,0.8);">Answers about documentary film editing for YouTube and other platforms</p>
+            </div>
+            
+            <div class="faq-body">
+                <div class="faq-item">
+                    <h3 style="color: var(--brand-orange); margin-bottom: 0.8rem; font-size: 1.2rem;">How do you approach storytelling in documentaries?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">I think of documentary editing like arranging photos in a family album. You want to tell a story that makes sense and touches people. I look for the heart of your footage - the moments that make viewers feel something real. Then I build around those moments, creating a flow that keeps people watching and helps them understand your message.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 style="color: var(--brand-orange); margin-bottom: 0.8rem; font-size: 1.2rem;">What's the difference between short and long documentary editing?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">Short documentaries are like telling a quick, powerful story to someone in an elevator - you have to grab attention immediately and make every second count. Long documentaries are more like having a full conversation over coffee - you can explore details, build emotional connections, and take viewers on a deeper journey. Both need to keep people engaged, just in different ways.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 style="color: var(--brand-orange); margin-bottom: 0.8rem; font-size: 1.2rem;">How do you handle large amounts of footage?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">I organize everything carefully, like sorting through a big box of family memories to find the best stories. First, I watch all your footage to understand what you have. Then I group similar moments together, find the strongest parts, and build from there. This helps me create a clear, focused story from all your material.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 style="color: var(--brand-orange); margin-bottom: 0.8rem; font-size: 1.2rem;">What makes a documentary work well on YouTube?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">YouTube viewers decide very quickly whether to keep watching. I focus on starting strong with something that makes people curious. Then I keep a steady rhythm - like a good song that doesn't have boring parts. I make sure the sound is clear, the visuals are interesting, and the story moves forward in a way that feels natural but keeps attention.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 style="color: var(--brand-orange); margin-bottom: 0.8rem; font-size: 1.2rem;">How do you work with clients during the editing process?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">I believe this is a partnership. After I understand your vision, I'll share early versions so we can make sure we're heading in the right direction. Your feedback is essential because you know your story best. I'll explain my choices and listen carefully to your thoughts. We work together until the film feels exactly right to you.</p>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 0;">
+                    <h3 style="color: var(--brand-orange); margin-bottom: 0.8rem; font-size: 1.2rem;">What if I need changes to the edited film?</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6;">I include two rounds of changes in my process because I want you to be completely happy with the final film. Think of it like trying on clothes - sometimes you need small adjustments to get the perfect fit. I welcome your feedback and will work with you until the film feels exactly right.</p>
+                </div>
+            </div>
+            
+            <div class="faq-footer">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Have a different question?</p>
+                <a href="#contact" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;" onclick="document.getElementById('faq-modal').style.display = 'none';">
+                    <span>💬</span>
+                    <span>Contact Me Directly</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Set current year in footer
@@ -1206,6 +1366,41 @@
                 // Scroll to result message
                 formResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
+        });
+        
+        // FAQ Modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqTrigger = document.getElementById('faq-trigger');
+            const faqModal = document.getElementById('faq-modal');
+            const faqClose = document.getElementById('faq-close');
+            
+            // Open modal
+            faqTrigger.addEventListener('click', function() {
+                faqModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+            
+            // Close modal
+            faqClose.addEventListener('click', function() {
+                faqModal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+            
+            // Close modal when clicking outside content
+            faqModal.addEventListener('click', function(e) {
+                if (e.target === faqModal) {
+                    faqModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && faqModal.style.display === 'flex') {
+                    faqModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
         });
         
         // Add scroll animations
