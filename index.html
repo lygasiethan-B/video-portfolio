@@ -3,14 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Binomugisha | Premium Video Editing & Digital Storytelling Services</title>
-    <meta name="description" content="Award-winning video editor with 7+ years experience. Premium YouTube editing, storytelling & retention optimization. Professional editing for creators & brands.">
-    <meta name="keywords" content="premium video editor, professional YouTube editing, video storytelling, DaVinci Resolve expert, Uganda video editor, African content creator, retention optimization, documentary film editor">
+    <!-- SEO/AEO Optimized Title for Search Intent -->
+    <title>Freelance Video Editing Services & Post-Production | Nathan Binomugisha</title>
+    <!-- AI-Optimized Meta Description -->
+    <meta name="description" content="Transform your raw footage into compelling narratives. Nathan Binomugisha offers expert video editing, motion graphics, and digital storytelling services for brands, documentaries, and content creators.">
+    <meta name="keywords" content="freelance video editor, professional video editing, post-production services, DaVinci Resolve expert, video editing for brands, documentary editing, YouTube editing, motion graphics, digital storytelling, content creator editing">
     <meta name="author" content="Nathan Binomugisha">
     
+    <!-- Structured Data for SEO/AEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Nathan Binomugisha Video Editing Services",
+        "description": "Professional freelance video editing and post-production services for brands, documentaries, and content creators",
+        "url": "https://video.binomugisha.org",
+        "telephone": "+256756180429",
+        "email": "binomugishacom@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bukoto 1, Kisaasi Road",
+            "addressLocality": "Kampala",
+            "addressRegion": "Central",
+            "addressCountry": "Uganda",
+            "postalCode": "10320"
+        },
+        "serviceType": "Video Editing Services",
+        "areaServed": ["Uganda", "East Africa", "Worldwide"],
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "163.55",
+            "highPrice": "285",
+            "offerCount": "3"
+        }
+    }
+    </script>
+    
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Nathan Binomugisha | Premium Video Editing Services">
-    <meta property="og:description" content="Award-winning video editor with 7+ years experience. Premium YouTube editing, storytelling & retention optimization.">
+    <meta property="og:title" content="Freelance Video Editing Services & Post-Production | Nathan Binomugisha">
+    <meta property="og:description" content="Transform your raw footage into compelling narratives. Expert video editing, motion graphics, and digital storytelling services.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://video.binomugisha.org">
     
@@ -27,18 +59,15 @@
     </script>
     
     <!-- Google Ads Tag -->
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17700443108"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-17700443108');
     </script>
     
-    <!-- Event snippet for Click to call conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Event snippet for Click to call conversion page -->
     <script>
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -62,6 +91,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
+        /* FIXED CSS - Complete styling embedded */
         :root {
             --netflix-black: #141414;
             --netflix-dark: #181818;
@@ -112,7 +142,7 @@
         }
         
         .hero-logo {
-            font-size: 4rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             color: var(--brand-orange);
         }
@@ -662,7 +692,8 @@
             display: none;
         }
         
-        .faq-modal[style*="display: flex"] {
+        .faq-modal.active {
+            display: flex;
             opacity: 1;
         }
         
@@ -679,7 +710,7 @@
             transition: transform 0.3s ease;
         }
         
-        .faq-modal[style*="display: flex"] .faq-modal-content {
+        .faq-modal.active .faq-modal-content {
             transform: translateY(0);
         }
         
@@ -721,6 +752,147 @@
             padding: 1.5rem 2rem;
             background: rgba(255,255,255,0.05);
             text-align: center;
+        }
+        
+        /* New Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 10001;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background: linear-gradient(145deg, var(--netflix-dark), var(--netflix-black));
+            max-width: 800px;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(226, 88, 34, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .modal-header {
+            padding: 2rem 2rem 1.5rem;
+            background: linear-gradient(90deg, var(--brand-orange), #c44a1a);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .modal-body {
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255,255,255,0.25);
+            transform: rotate(90deg);
+        }
+        
+        /* Modal Typography */
+        .modal-body h2 {
+            color: var(--brand-yellow);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid rgba(226, 88, 34, 0.3);
+            padding-bottom: 0.5rem;
+        }
+        
+        .modal-body h3 {
+            color: var(--text-primary);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .modal-body p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .modal-body ul {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+        
+        .modal-body li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        /* Updated Footer Legal Links */
+        .footer-legal {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .legal-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .legal-link:hover {
+            color: var(--brand-orange);
+            border-color: rgba(226, 88, 34, 0.3);
+            background: rgba(226, 88, 34, 0.05);
         }
         
         /* Responsive Design */
@@ -769,6 +941,45 @@
             .faq-header, .faq-body, .faq-footer {
                 padding: 1.5rem !important;
             }
+            
+            /* Mobile optimization for modals */
+            .modal-content {
+                margin: 0.5rem;
+                max-height: 90vh;
+            }
+            
+            .modal-header,
+            .modal-body {
+                padding: 1.5rem;
+            }
+            
+            .legal-links {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .modal-body h2 {
+                font-size: 1.2rem;
+            }
+            
+            .modal-body h3 {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Tablet optimization */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .modal-content {
+                max-width: 90%;
+            }
+        }
+        
+        /* Large desktop optimization */
+        @media (min-width: 1200px) {
+            .modal-content {
+                max-width: 900px;
+            }
         }
         
         /* Animation for Netflix feel */
@@ -807,10 +1018,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content animate-fadeInUp">
-            <div class="hero-logo">🎬</div>
-            <h1 class="hero-title">NATHAN BINOMUGISHA</h1>
+            <div class="hero-logo">✨</div>
+            <h1 class="hero-title">FREELANCE VIDEO EDITING SERVICES & POST-PRODUCTION</h1>
             <p class="hero-tagline">Professional Video Editor in East Africa</p>
-            <p class="hero-description">Transforming raw footage into cinematic narratives that captivate audiences and deliver measurable results for global creators and brands.</p>
+            <p class="hero-description">Transform your raw footage into compelling narratives with expert video editing, motion graphics, and digital storytelling services for brands, documentaries, and content creators.</p>
             
             <div class="trust-badges">
                 <div class="trust-badge">
@@ -853,7 +1064,7 @@
     <!-- Social Proof Section -->
     <section class="section" style="background: linear-gradient(135deg, var(--netflix-dark) 0%, var(--netflix-black) 100%);">
         <div class="section-header">
-            <h2 class="section-title">Trusted by Global Creators</h2>
+            <h2 class="section-title">Trusted by Global Creators & Brands</h2>
         </div>
         <div class="stats-grid">
             <div class="stat-item">
@@ -874,8 +1085,8 @@
     <!-- Services Section -->
     <section class="section section-dark" id="services">
         <div class="section-header">
-            <h2 class="section-title">Premium Editing Services</h2>
-            <p class="section-subtitle">Professional video editing packages designed to elevate your content with cinematic quality and strategic storytelling.</p>
+            <h2 class="section-title">Freelance Video Editing Services</h2>
+            <p class="section-subtitle">Professional video editing and post-production packages designed to elevate your content with cinematic quality and strategic storytelling for brands, documentaries, and creators.</p>
         </div>
         
         <div class="services-grid">
@@ -884,8 +1095,8 @@
                 <div class="service-header">
                     <h3 class="service-title">Short-Form Impact Edit</h3>
                     <div class="service-badges">
-                        <span class="service-badge">🎬 DaVinci Resolve</span>
-                        <span class="service-badge">⚡ 48h Delivery</span>
+                        <span class="service-badge">DaVinci Resolve</span>
+                        <span class="service-badge">48h Delivery</span>
                     </div>
                 </div>
                 <div class="service-body">
@@ -911,8 +1122,8 @@
                 <div class="service-header">
                     <h3 class="service-title">Long-Form Narrative Edit</h3>
                     <div class="service-badges">
-                        <span class="service-badge">🎬 DaVinci Resolve</span>
-                        <span class="service-badge">📈 Retention Focused</span>
+                        <span class="service-badge">DaVinci Resolve</span>
+                        <span class="service-badge">Retention Focused</span>
                     </div>
                 </div>
                 <div class="service-body">
@@ -938,8 +1149,8 @@
                 <div class="service-header">
                     <h3 class="service-title">Custom Premium Project</h3>
                     <div class="service-badges">
-                        <span class="service-badge">🎬 DaVinci Resolve</span>
-                        <span class="service-badge">✨ Fully Custom</span>
+                        <span class="service-badge">DaVinci Resolve</span>
+                        <span class="service-badge">Fully Custom</span>
                     </div>
                 </div>
                 <div class="service-body">
@@ -1001,7 +1212,7 @@
     <section class="section section-dark" id="portfolio">
         <div class="section-header">
             <h2 class="section-title">Featured Work</h2>
-            <p class="section-subtitle">A curated selection of projects showcasing cinematic storytelling and professional editing techniques.</p>
+            <p class="section-subtitle">A curated selection of projects showcasing cinematic storytelling and professional editing techniques for brands and creators.</p>
         </div>
         
         <div class="portfolio-carousel">
@@ -1104,8 +1315,8 @@
                 <input type="hidden" name="access_key" value="9ce26fff-f98c-4fa2-9f2a-7bb1a3cfb231">
                 
                 <!-- Optional but recommended hidden fields -->
-                <input type="hidden" name="subject" value="Premium Video Editing Project Inquiry">
-                <input type="hidden" name="from_name" value="BINOMUGISHA Video Editing">
+                <input type="hidden" name="subject" value="Freelance Video Editing Project Inquiry">
+                <input type="hidden" name="from_name" value="Nathan Binomugisha Video Editing">
                 <input type="hidden" name="replyto" value="auto">
                 
                 <!-- Honeypot spam protection -->
@@ -1180,7 +1391,7 @@
         <div class="footer-content">
             <div>
                 <h3>Nathan Binomugisha</h3>
-                <p>Premium Video Editor & Digital Storyteller</p>
+                <p>Freelance Video Editor & Digital Storyteller</p>
                 <div style="margin-top: 1rem;">
                     <div class="contact-item" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem;">
                         <span>📍</span>
@@ -1204,6 +1415,7 @@
                 <h4>Connect</h4>
                 <a href="https://binomugisha.org">Main Website</a>
                 <a href="https://media.binomugisha.org">Media Consultancy</a>
+                <a href="https://series.binomugisha.org">Partner on Our Next Film</a>
                 <a href="https://www.linkedin.com/in/binomugisha/">LinkedIn</a>
                 <a href="mailto:binomugishacom@gmail.com">Email</a>
                 <a href="https://wa.me/256756180429" onclick="return gtag_report_conversion('https://wa.me/256756180429')">WhatsApp</a>
@@ -1212,7 +1424,7 @@
             <div class="footer-links">
                 <h4>Resources</h4>
                 <a href="https://selar.com/6q182625of">Selar Store</a>
-                <a href="https://lyenk.vendblue.store/">Vendblue Store</a>
+                <a href="https://lyenk.com">Insight Engine</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Get a Quote</a>
             </div>
@@ -1221,29 +1433,164 @@
         <!-- FAQ Section -->
         <div class="faq-section" style="margin: 3rem 0 2rem; text-align: center;">
             <h3 style="margin-bottom: 1rem; color: var(--text-primary);">FAQs</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Answers to questions I often receive about documentary editing</p>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Answers to questions I often receive about video editing</p>
             <button id="faq-trigger" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
                 <span>❓</span>
                 <span>View Frequently Asked Questions (FAQs)</span>
             </button>
         </div>
         
+        <!-- Legal Links Section -->
+        <div class="footer-legal">
+            <div class="legal-links">
+                <a href="#" class="legal-link" id="privacy-trigger">Privacy Policy</a>
+                <a href="#" class="legal-link" id="terms-trigger">Terms of Service</a>
+            </div>
+        </div>
+        
         <div class="footer-credentials">
             <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                Professional Video Editor | DaVinci Resolve Studio Certified | YouTube Optimization
+                Freelance Video Editor | DaVinci Resolve Studio Certified | YouTube Optimization
             </p>
-        </div>
-
-        <!-- Legal Links -->
-        <div style="text-align: center; margin: 2rem 0;">
-            <a href="#privacy" style="color: var(--text-secondary); margin: 0 1rem; font-size: 0.9rem;">Privacy Policy</a>
-            <a href="#terms" style="color: var(--text-secondary); margin: 0 1rem; font-size: 0.9rem;">Terms of Service</a>
         </div>
         
         <div class="copyright">
             &copy; <span id="current-year"></span> Nathan Binomugisha. All rights reserved.
         </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="privacy-close">✕</button>
+            <div class="modal-header">
+                <h2 style="color: white; margin: 0;">Privacy Policy</h2>
+                <p style="color: rgba(255,255,255,0.8); margin: 0.5rem 0 0;">Last updated: <span id="privacy-date"></span></p>
+            </div>
+            <div class="modal-body">
+                <h2>1. Information We Collect</h2>
+                <p>We collect information that you provide directly to us when you use our services, including:</p>
+                <ul>
+                    <li>Contact information (name, email address, phone number)</li>
+                    <li>Project details and requirements</li>
+                    <li>Payment information (processed securely through Payoneer)</li>
+                    <li>Communication records</li>
+                    <li>Technical data (IP address, browser type, device information)</li>
+                </ul>
+                
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the collected information for:</p>
+                <ul>
+                    <li>Providing and improving our video editing services</li>
+                    <li>Communicating with you about your projects</li>
+                    <li>Processing payments securely</li>
+                    <li>Sending project updates and revisions</li>
+                    <li>Complying with legal obligations</li>
+                    <li>Improving our website and services</li>
+                </ul>
+                
+                <h2>3. Data Protection & Security</h2>
+                <p>We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. All payment transactions are encrypted using SSL technology and processed through secure payment gateways (Payoneer).</p>
+                
+                <h2>4. Data Retention</h2>
+                <p>We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. Project files are typically retained for 12 months after project completion unless otherwise requested.</p>
+                
+                <h2>5. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Request deletion of your data</li>
+                    <li>Object to data processing</li>
+                    <li>Request data portability</li>
+                    <li>Withdraw consent at any time</li>
+                </ul>
+                
+                <h2>6. Third-Party Services</h2>
+                <p>We use trusted third-party services including:</p>
+                <ul>
+                    <li>Payoneer for secure payment processing</li>
+                    <li>Google Drive for file sharing</li>
+                    <li>Email services for communication</li>
+                    <li>Web hosting services</li>
+                </ul>
+                <p>These services have their own privacy policies governing data handling.</p>
+                
+                <h2>7. Contact Information</h2>
+                <p>For any privacy-related questions or to exercise your rights, please contact:</p>
+                <p><strong>Nathan Binomugisha</strong><br>
+                Email: binomugishacom@gmail.com<br>
+                Phone: +256 756 180429<br>
+                Address: Bukoto 1, Kisaasi Road, 10320, Kampala Uganda</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="terms-close">✕</button>
+            <div class="modal-header">
+                <h2 style="color: white; margin: 0;">Terms of Service</h2>
+                <p style="color: rgba(255,255,255,0.8); margin: 0.5rem 0 0;">Last updated: <span id="terms-date"></span></p>
+            </div>
+            <div class="modal-body">
+                <h2>1. Service Agreement</h2>
+                <p>By engaging my freelance video editing services, you agree to these terms. Services include video editing, color grading, sound design, motion graphics, and post-production work as described in your project proposal.</p>
+                
+                <h2>2. Payment Terms</h2>
+                <p><strong>Payment Schedule:</strong></p>
+                <ul>
+                    <li>Projects under $164: Full payment via Selar before work begins</li>
+                    <li>Projects over $164: 50% deposit via Payoneer before work, 50% upon completion</li>
+                    <li>Custom projects: Payment terms as specified in the project agreement</li>
+                </ul>
+                <p><strong>Accepted Payment Methods:</strong> Payoneer (credit cards, bank transfers), Selar</p>
+                <p><strong>Currency:</strong> All prices are in USD unless otherwise specified</p>
+                
+                <h2>3. Project Delivery & Revisions</h2>
+                <p><strong>Delivery Timeline:</strong> Standard delivery is 5-7 business days. Rush delivery (1-3 days) available with additional fee.</p>
+                <p><strong>Revisions:</strong> Each service package includes 2 rounds of revisions. Additional revisions billed at $25/hour.</p>
+                <p><strong>File Delivery:</strong> Final files delivered via Google Drive or preferred cloud service.</p>
+                
+                <h2>4. Client Responsibilities</h2>
+                <p>You agree to:</p>
+                <ul>
+                    <li>Provide clear project requirements and feedback</li>
+                    <li>Deliver all necessary raw footage and assets in agreed formats</li>
+                    <li>Make timely payments as specified</li>
+                    <li>Provide feedback within 3 business days for each revision round</li>
+                    <li>Obtain necessary rights for all provided materials</li>
+                </ul>
+                
+                <h2>5. Intellectual Property</h2>
+                <p><strong>Client Materials:</strong> You retain all rights to your original footage and materials.</p>
+                <p><strong>Final Deliverables:</strong> Upon full payment, you receive full rights to the edited video for your intended use.</p>
+                <p><strong>Portfolio Rights:</strong> I retain the right to display completed work in my portfolio and marketing materials unless otherwise agreed in writing.</p>
+                
+                <h2>6. Cancellation & Refunds</h2>
+                <p><strong>Cancellation by Client:</strong></p>
+                <ul>
+                    <li>Before work begins: Full refund of deposit</li>
+                    <li>During editing: Refund proportional to work completed</li>
+                    <li>After delivery: No refunds</li>
+                </ul>
+                <p><strong>Cancellation by Editor:</strong> Full refund if unable to complete work.</p>
+                
+                <h2>7. Liability</h2>
+                <p>Total liability limited to project fee. Not liable for indirect damages. Professional indemnity insurance covers work errors.</p>
+                
+                <h2>8. Governing Law</h2>
+                <p>These terms governed by laws of Uganda. Disputes resolved in Kampala courts.</p>
+                
+                <h2>9. Contact Information</h2>
+                <p><strong>Nathan Binomugisha</strong><br>
+                Email: binomugishacom@gmail.com<br>
+                Phone: +256 756 180429<br>
+                Address: Bukoto 1, Kisaasi Road, 10320, Kampala Uganda</p>
+            </div>
+        </div>
+    </div>
 
     <!-- FAQ Modal -->
     <div id="faq-modal" class="faq-modal">
@@ -1252,7 +1599,7 @@
             
             <div class="faq-header">
                 <h2 style="color: white; margin-bottom: 0.5rem;">Frequently Asked Questions</h2>
-                <p style="color: rgba(255,255,255,0.8);">Answers about documentary film editing for YouTube and other platforms</p>
+                <p style="color: rgba(255,255,255,0.8);">Answers about freelance video editing for brands, documentaries, and content creators</p>
             </div>
             
             <div class="faq-body">
@@ -1294,8 +1641,17 @@
     </div>
 
     <script>
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Set current year in footer and modals
+        const currentYear = new Date().getFullYear();
+        const currentDate = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        document.getElementById('current-year').textContent = currentYear;
+        document.getElementById('privacy-date').textContent = currentDate;
+        document.getElementById('terms-date').textContent = currentDate;
         
         // Loading bar animation
         window.addEventListener('load', function() {
@@ -1306,7 +1662,109 @@
             }, 500);
         });
         
-        // Web3Forms handling - FIXED VERSION
+        // Modal Management System
+        class ModalManager {
+            constructor() {
+                this.modals = {
+                    privacy: {
+                        trigger: document.getElementById('privacy-trigger'),
+                        modal: document.getElementById('privacy-modal'),
+                        close: document.getElementById('privacy-close')
+                    },
+                    terms: {
+                        trigger: document.getElementById('terms-trigger'),
+                        modal: document.getElementById('terms-modal'),
+                        close: document.getElementById('terms-close')
+                    },
+                    faq: {
+                        trigger: document.getElementById('faq-trigger'),
+                        modal: document.getElementById('faq-modal'),
+                        close: document.getElementById('faq-close')
+                    }
+                };
+                
+                this.init();
+            }
+            
+            init() {
+                // Setup all modals
+                for (const [key, modal] of Object.entries(this.modals)) {
+                    if (modal.trigger && modal.modal) {
+                        // Open modal
+                        modal.trigger.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            this.openModal(key);
+                        });
+                        
+                        // Close modal with close button
+                        if (modal.close) {
+                            modal.close.addEventListener('click', () => {
+                                this.closeModal(key);
+                            });
+                        }
+                        
+                        // Close modal when clicking outside
+                        modal.modal.addEventListener('click', (e) => {
+                            if (e.target === modal.modal) {
+                                this.closeModal(key);
+                            }
+                        });
+                    }
+                }
+                
+                // Escape key to close any open modal
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeAllModals();
+                    }
+                });
+            }
+            
+            openModal(modalKey) {
+                const modal = this.modals[modalKey];
+                if (modal) {
+                    // Close any other open modals first
+                    this.closeAllModals();
+                    
+                    // Open requested modal
+                    modal.modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Focus management for accessibility
+                    setTimeout(() => {
+                        const focusable = modal.modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                        if (focusable) focusable.focus();
+                    }, 100);
+                }
+            }
+            
+            closeModal(modalKey) {
+                const modal = this.modals[modalKey];
+                if (modal && modal.modal.classList.contains('active')) {
+                    modal.modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    
+                    // Return focus to trigger
+                    if (modal.trigger) {
+                        modal.trigger.focus();
+                    }
+                }
+            }
+            
+            closeAllModals() {
+                for (const modal of Object.values(this.modals)) {
+                    if (modal.modal.classList.contains('active')) {
+                        modal.modal.classList.remove('active');
+                    }
+                }
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Initialize modal manager
+        const modalManager = new ModalManager();
+        
+        // Web3Forms handling
         document.getElementById('project-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -1364,41 +1822,6 @@
             }
         });
         
-        // FAQ Modal functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqTrigger = document.getElementById('faq-trigger');
-            const faqModal = document.getElementById('faq-modal');
-            const faqClose = document.getElementById('faq-close');
-            
-            // Open modal
-            faqTrigger.addEventListener('click', function() {
-                faqModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
-            
-            // Close modal
-            faqClose.addEventListener('click', function() {
-                faqModal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            });
-            
-            // Close modal when clicking outside content
-            faqModal.addEventListener('click', function(e) {
-                if (e.target === faqModal) {
-                    faqModal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && faqModal.style.display === 'flex') {
-                    faqModal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-        
         // Add scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -1417,6 +1840,21 @@
         document.querySelectorAll('.service-card, .portfolio-item, .contact-form, .stat-item, .process-step').forEach(el => {
             observer.observe(el);
         });
+        
+        // Mobile menu optimization
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
+        
+        // Optimize touch interactions for mobile
+        if (isMobile()) {
+            // Increase touch targets for better mobile UX
+            document.querySelectorAll('.btn, .legal-link, .footer-links a').forEach(link => {
+                link.style.minHeight = '44px';
+                link.style.display = 'flex';
+                link.style.alignItems = 'center';
+            });
+        }
     </script>
 </body>
 </html>
