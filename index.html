@@ -1343,94 +1343,129 @@
             line-height: 1.5;
         }
         
-        .contact-form {
-            max-width: 720px;
+        /* Contact Direct CTA Card */
+        .contact-cta-card {
+            max-width: 800px;
             margin: 0 auto;
             background: linear-gradient(145deg, var(--netflix-card), var(--netflix-dark));
-            padding: 2.5rem;
-            border-radius: 8px;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
             border: 1px solid var(--netflix-border);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-        
-        input, select, textarea {
-            width: 100%;
-            padding: 0.85rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 6px;
-            color: var(--text-primary);
-            font-family: inherit;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
-        
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--brand-orange);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 0 3px rgba(226, 88, 34, 0.2);
-        }
-        
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-        
-        .payment-info {
-            background: rgba(240, 180, 41, 0.08);
-            padding: 1.25rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            border-left: 3px solid var(--brand-yellow);
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
-        .payment-info strong {
-            color: var(--brand-yellow);
-        }
-        
-        .form-result {
-            display: none;
-            margin-top: 1rem;
-            padding: 1rem;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 0.92rem;
+        .contact-status-pill {
+            display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
-        }
-        
-        .form-result.success {
-            display: flex;
-            background-color: rgba(34, 197, 94, 0.12);
+            gap: 0.5rem;
+            background: rgba(34, 197, 94, 0.12);
             border: 1px solid rgba(34, 197, 94, 0.3);
             color: #4ade80;
+            padding: 0.4rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
         }
-        
-        .form-result.error {
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            box-shadow: 0 0 8px #22c55e;
+            animation: pulse-dot 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+
+        .contact-cta-card h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-cta-card p.contact-cta-desc {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-cta-actions {
             display: flex;
-            background-color: rgba(239, 68, 68, 0.12);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #f87171;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.25rem;
+        }
+
+        .btn-lg {
+            padding: 0.95rem 1.8rem;
+            font-size: 1rem;
+            min-height: 52px;
+        }
+
+        .contact-checklist-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--netflix-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-checklist-card h4 {
+            color: var(--brand-yellow);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .contact-checklist-grid li {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-checklist-grid li .icon {
+            color: var(--brand-orange);
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .payment-info-banner {
+            background: rgba(240, 180, 41, 0.08);
+            border-left: 3px solid var(--brand-yellow);
+            padding: 1rem 1.25rem;
+            border-radius: 4px;
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+
+        .payment-info-banner strong {
+            color: var(--brand-yellow);
         }
         
         /* Footer */
@@ -2180,7 +2215,7 @@
             <div class="section-container">
                 <div class="section-header">
                     <h2 class="section-title">Start Your Video Project</h2>
-                    <p class="section-subtitle">Share your footage details and timeline to receive a custom quote and secure Payoneer invoice.</p>
+                    <p class="section-subtitle">Connect directly with Nathan to discuss your creative brief, turnaround timeline, and receive a custom Payoneer quote.</p>
                 </div>
                 
                 <div class="contact-features">
@@ -2188,96 +2223,74 @@
                         <div class="feature-icon-badge badge-orange">
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                         </div>
-                        <h3>48-Hour Response</h3>
-                        <p>Prompt initial project assessment and clear turnaround timeline</p>
+                        <h3>Rapid Turnaround</h3>
+                        <p>Immediate consultation, direct feedback alignment, and prompt delivery timelines</p>
                     </div>
                     <div class="contact-feature">
                         <div class="feature-icon-badge badge-yellow">
                             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
-                        <h3>Secure Process</h3>
-                        <p>Protected milestone payments and verified Payoneer invoicing</p>
+                        <h3>Secure Invoicing</h3>
+                        <p>Protected milestone payments and verified Payoneer & Selar invoicing</p>
                     </div>
                     <div class="contact-feature">
                         <div class="feature-icon-badge badge-green">
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         </div>
-                        <h3>Global & Local Delivery</h3>
-                        <p>Based in Kampala, Uganda, serving international creators seamlessly</p>
+                        <h3>Seamless Collaboration</h3>
+                        <p>Remote workflow via Google Drive, Dropbox, and Frame.io review links</p>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="project-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="9ce26fff-f98c-4fa2-9f2a-7bb1a3cfb231">
-                        <input type="hidden" name="subject" value="Freelance Video Editing Inquiry">
-                        <input type="hidden" name="from_name" value="Nathan Binomugisha Video Editing Services">
-                        <input type="hidden" name="replyto" value="auto">
-                        <input type="checkbox" name="botcheck" style="display: none;">
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" autocomplete="name" required placeholder="e.g. Alex Morgan">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" autocomplete="email" required placeholder="alex@example.com">
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="service">Service Package *</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Select a package</option>
-                                    <option value="short-form">Short-Form Impact Edit ($163.55) - via Selar</option>
-                                    <option value="long-form">Long-Form Narrative Edit ($285.00) - via Payoneer</option>
-                                    <option value="custom">Custom Premium Project - Custom Quote</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="timeline">Project Timeline</label>
-                                <select id="timeline" name="timeline">
-                                    <option value="">Select timeline</option>
-                                    <option value="urgent">Urgent (1-3 business days)</option>
-                                    <option value="standard">Standard (5-7 business days)</option>
-                                    <option value="flexible">Flexible (2+ weeks)</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="description">Project Description *</label>
-                            <textarea id="description" name="description" placeholder="Describe the goal of the video, target audience, style preferences, and key deliverables..." required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="footage">Footage & Media Link (Optional)</label>
-                            <textarea id="footage" name="footage" placeholder="Paste link to raw footage on Google Drive, Dropbox, or Frame.io, or describe recorded format..."></textarea>
-                        </div>
-                        
-                        <div class="payment-info">
-                            <p><strong>Payment & Invoicing:</strong> Following project review, you will receive a formal proposal and secure Payoneer payment invoice supporting credit cards and bank transfers.</p>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1.25rem;">
-                            <span class="btn-text">Submit Project Details</span>
-                            <span class="btn-loading" style="display: none;">Sending...</span>
-                        </button>
-                        
-                        <div id="form-result" class="form-result"></div>
-                        
-                        <div style="text-align: center; margin-top: 1.5rem;">
-                            <p style="color: var(--text-secondary); margin-bottom: 0.75rem; font-size: 0.9rem;">Or connect directly for a quick chat:</p>
-                            <a href="https://wa.me/256756180429" class="btn btn-whatsapp" onclick="return gtag_report_conversion('https://wa.me/256756180429')">
-                                <span class="icon">
-                                    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                                </span>
-                                <span>Message on WhatsApp</span>
-                            </a>
-                        </div>
-                    </form>
+                <div class="contact-cta-card">
+                    <div class="contact-status-pill">
+                        <span class="status-dot"></span>
+                        <span>Available for New Projects &bull; Typical Response within 2 Hours</span>
+                    </div>
+
+                    <h3>Let's Bring Your Story to Life</h3>
+                    <p class="contact-cta-desc">Skip the lengthy forms. Reach out directly on WhatsApp for instant project scoping or send an email with your footage link.</p>
+
+                    <div class="contact-cta-actions">
+                        <a href="https://wa.me/256756180429?text=Hi%20Nathan,%20I'd%20like%20to%20discuss%20a%20video%20editing%20project" class="btn btn-whatsapp btn-lg" onclick="return gtag_report_conversion('https://wa.me/256756180429?text=Hi%20Nathan,%20I%27d%20like%20to%20discuss%20a%20video%20editing%20project')">
+                            <span class="icon" style="width: 1.35rem; height: 1.35rem;">
+                                <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            </span>
+                            <span>Message on WhatsApp (+256 756 180429)</span>
+                        </a>
+
+                        <a href="mailto:info@binomugisha.org?subject=Video%20Editing%20Project%20Inquiry" class="btn btn-secondary btn-lg">
+                            <span class="icon" style="width: 1.35rem; height: 1.35rem;">
+                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </span>
+                            <span>Email: info@binomugisha.org</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-checklist-card">
+                        <h4>
+                            <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
+                            <span>Helpful details to include in your message:</span>
+                        </h4>
+                        <ul class="contact-checklist-grid">
+                            <li>
+                                <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span>Video style & target platform</span>
+                            </li>
+                            <li>
+                                <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span>Raw footage link (Drive, Dropbox, Frame.io)</span>
+                            </li>
+                            <li>
+                                <span class="icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span>Target runtime & turnaround deadline</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="payment-info-banner">
+                        <p><strong>Payment & Security:</strong> Invoices are settled via secure Payoneer milestone links (Credit Cards, ACH, Wire) or instant checkout via Selar. All projects include 2 revisions.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2545,52 +2558,6 @@
         if (videoModal) {
             videoModal.addEventListener('click', function(e) {
                 if (e.target === videoModal) closeVideoModal();
-            });
-        }
-        
-        // Web3Forms AJAX Handling
-        const projectForm = document.getElementById('project-form');
-        if (projectForm) {
-            projectForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const btnText = submitBtn.querySelector('.btn-text');
-                const btnLoading = submitBtn.querySelector('.btn-loading');
-                const formResult = document.getElementById('form-result');
-                
-                btnText.style.display = 'none';
-                btnLoading.style.display = 'inline';
-                submitBtn.disabled = true;
-                
-                try {
-                    const formData = new FormData(this);
-                    formData.append('redirect', 'false');
-                    
-                    const response = await fetch(this.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    
-                    const result = await response.json();
-                    
-                    if (response.ok && result.success) {
-                        formResult.className = 'form-result success';
-                        formResult.innerHTML = '<span class="icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span><span>Thank you for your submission. Nathan will review your project and send a secure Payoneer quote within 24 hours.</span>';
-                        this.reset();
-                    } else {
-                        throw new Error(result.message || 'Submission failed');
-                    }
-                } catch (error) {
-                    formResult.className = 'form-result error';
-                    formResult.innerHTML = '<span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><span>Error sending your message. Please reach out directly to info@binomugisha.org or WhatsApp +256 756 180429.</span>';
-                } finally {
-                    btnText.style.display = 'inline';
-                    btnLoading.style.display = 'none';
-                    submitBtn.disabled = false;
-                    formResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
             });
         }
     </script>
