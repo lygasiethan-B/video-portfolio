@@ -23,14 +23,14 @@
   - Length: 10 to 25 minutes
   - Features: Retention-focused narrative structure, B-roll selection, sound mixing, color grading, 2 revision rounds.
   - Turnaround: 5-7 business days
-  - Payment: Secure escrow / milestone invoice via Payoneer
+  - Payment: Secure milestone invoicing / bank cards / Selar
 - **Custom Premium Projects (Custom Quote)**:
   - Formats: Feature documentaries, brand commercials, complex multi-cam productions, visual effects (VFX).
   - Features: Customized deliverables, dedicated workflow, rush turnaround options.
 
 ## Post-Production Workflow
 1. **Consultation & Creative Brief**: Strategy alignment, project objectives, style reference, and audience retention targets.
-2. **Footage Transfer & Secure Invoicing**: Asset transfer via Google Drive / Dropbox / Frame.io; secure payment processing via Payoneer or Selar.
+2. **Footage Transfer & Secure Invoicing**: Asset transfer via Google Drive / Dropbox / Frame.io; secure payment processing via Selar or direct milestone invoice.
 3. **Rough Cut to Fine Polish**: Narrative assembly, sound design, pacing optimization, and DaVinci Resolve color grading.
 4. **Review & Delivery**: Client feedback incorporation across 2 revision rounds; delivery of high-bitrate master files.
 
