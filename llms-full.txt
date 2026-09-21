@@ -1,0 +1,82 @@
+# Nathan Binomugisha - Freelance Video Editing & Post-Production (Full Reference)
+
+> Complete documentation, service breakdowns, pricing tables, technical specifications, and post-production workflows for Nathan Binomugisha.
+
+## Executive Summary
+Nathan Binomugisha is an East Africa-based professional freelance video editor and post-production specialist with over a decade of hands-on experience in documentary editing, YouTube audience retention optimization, cinematic color grading, and commercial storytelling. Serving global creators, non-profit organizations, and media brands remotely.
+
+## Key Facts & Entity Data
+- **Full Name**: Nathan Binomugisha
+- **Professional Title**: Freelance Video Editor & Post-Production Specialist
+- **Certification**: DaVinci Resolve Studio Certified
+- **Primary Software**: DaVinci Resolve Studio 19, Adobe Premiere Pro, Adobe After Effects, Fairlight Audio
+- **Core Specializations**: Documentary Film Post-Production, YouTube Audience Retention, Color Grading, Sound Design, Motion Graphics
+- **Headquarters**: Bukoto 1, Kisaasi Road, 10320, Kampala, Uganda
+- **Service Scope**: East Africa (Uganda, Kenya, Rwanda, Tanzania) and International (US, UK, Europe, Australia, Worldwide)
+- **Official Website**: https://video.binomugisha.org
+- **Email Contact**: info@binomugisha.org / binomugishacom@gmail.com
+- **Direct WhatsApp**: +256 756 180429
+- **LinkedIn**: https://www.linkedin.com/in/binomugisha/
+
+## Detailed Service Packages
+
+### 1. Short-Form Impact Edit
+- **Target Platforms**: YouTube Shorts, TikTok, Instagram Reels, LinkedIn Video
+- **Duration**: Up to 180 seconds (3 minutes)
+- **Price**: $163.55 USD (flat-rate)
+- **Delivery Timeline**: 48 hours
+- **Features Included**:
+  - Retention-engineered hook and visual pacing
+  - Kinetic typography and animated on-screen captions
+  - Dynamic audio mastering, SFX, and royalty-free music
+  - DaVinci Resolve color correction and grading
+  - 2 revision rounds included
+- **Order Method**: Instant purchase via Selar store (https://selar.com/6q182625of) or direct inquiry.
+
+### 2. Long-Form Narrative Edit
+- **Target Platforms**: YouTube Long-form Videos, Documentaries, Video Essays, Podcasts
+- **Duration**: 10 to 25 minutes
+- **Price**: $285.00 USD
+- **Delivery Timeline**: 5 to 7 business days
+- **Features Included**:
+  - Narrative structuring and A-roll/B-roll selection
+  - Audience retention pacing and pattern interrupts
+  - Multi-track sound design, noise reduction, and audio leveling
+  - Professional DaVinci Resolve color grading
+  - Motion graphics, title cards, and lower thirds
+  - 2 revision rounds included
+- **Payment Method**: Secure milestone invoicing via Payoneer (Credit Card / Bank Wire).
+
+### 3. Custom Premium Projects
+- **Scope**: Docu-series, commercial brand films, multi-camera conference streams, visual effects (VFX)
+- **Price**: Custom Quote based on project scope
+- **Turnaround**: Flexible / Rush turnaround available
+- **Deliverables**: Multi-aspect deliverables (16:9, 9:16, 1:1, 4:5), project archive, uncompressed master ProRes/DNxHR files.
+
+## Step-by-Step Remote Video Editing Workflow
+1. **Creative Brief & Asset Transfer**: Client submits footage links (Google Drive, Dropbox, Frame.io) and creative requirements.
+2. **Timeline Assembly & Rough Cut**: Editor logs footage, creates timeline sequence, and shares rough cut review link.
+3. **Sound Mixing & Color Grading**: Professional audio mastering in Fairlight and color grading in DaVinci Resolve.
+4. **Iterative Feedback**: Up to 2 rounds of timecoded client feedback.
+5. **Final 4K Master Delivery**: Delivery of high-bitrate master files, thumbnail assets, and archival project files.
+
+## Frequently Asked Questions (FAQ)
+
+### What is professional video editing and post-production?
+Professional video post-production is the multi-stage craft of converting raw recorded footage and audio into a polished, cohesive narrative. It includes footage ingest and logging, narrative rough cutting, pacing and retention optimization, color grading in DaVinci Resolve, dialogue cleanup and sound design, and master formatting for digital distribution.
+
+### How does the remote video editing workflow operate?
+Clients upload high-resolution footage or proxy files to cloud platforms (Google Drive, Dropbox, or Frame.io). Nathan reviews the brief, organizes the timeline, produces an initial rough cut, and provides private review links. After up to two rounds of client feedback, final color-graded 4K master files and stems are delivered.
+
+### How do you approach storytelling in documentaries?
+Documentary storytelling focuses on uncovering authentic emotional anchors within raw footage. Nathan sequences the narrative arc to build tension, establishes clear visual rhythm, and utilizes contextual B-roll and sound design to keep viewers immersed from opening hook to conclusion.
+
+### What is the difference between short-form and long-form video editing?
+Short-form video editing (YouTube Shorts, TikTok, Reels) focuses on sub-second hooks, dynamic animated captions, rapid pacing, and immediate payoff to maximize algorithmic retention. Long-form video editing (YouTube, docu-series) focuses on deeper narrative pacing, thematic structure, nuanced soundscapes, and sustaining engagement over 10 to 30 minutes.
+
+### What editing software and hardware do you use?
+Nathan utilizes DaVinci Resolve Studio for professional non-linear editing, Fairlight audio mastering, and color grading, alongside Adobe After Effects and Premiere Pro for specialized motion graphics and asset preparation.
+
+### What payment methods are supported for international clients?
+International payments are secured through Payoneer for invoices and milestone deposits (supporting international credit cards and direct bank transfers) as well as Selar for instant short-form package orders.
+
